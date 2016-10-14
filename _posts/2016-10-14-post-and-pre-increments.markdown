@@ -50,19 +50,21 @@ public static void main(java.lang.String[]);
       32: return
 ```
 
-comparing the difference, it is that  line 3,4 and line 18,19 share different orders.
-line 2: load value of y (0)(load first number in addition)
-line 3: load value of y (0)(load second number in addition)
-line 4: increase variable z (but store in other places, as post incremental) 
-line 7: add in 0+0=0
-line 8: store 0 in value y
+Comparing the difference, it is that  line 3,4 and line 18,19 share different orders.
 
-line 17: load value of z(0)(load first number in addition)
-line 18: increase variable z
-line 22: load value of z(1)(load second number in addition)
-line 23: add in 0+1=1
-line 24: store 1 in value z
+- line 2: load value of y (0)(load first number in addition)
+- line 3: load value of y (0)(load second number in addition)
+- line 4: increase variable z (but store in other places, as post incremental) 
+- line 7: add in 0+0=0
+- line 8: store 0 in value y
+
+- line 17: load value of z(0)(load first number in addition)
+- line 18: increase variable z
+- line 22: load value of z(1)(load second number in addition)
+- line 23: add in 0+1=1
+- line 24: store 1 in value z
 
 Summary:
+
 - even all the execution is about the same variable, addition will load first operand and then load second operand (from left to right according to precedence, as stack)
 - post and pre increment differed by loading and increasing bytecode order.
