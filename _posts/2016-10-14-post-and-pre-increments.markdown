@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Post and Pre increments
 layout: post
 tags: [#Java, #JVM]
@@ -63,6 +63,6 @@ line 22: load value of z(1)(load second number in addition)
 line 23: add in 0+1=1
 line 24: store 1 in value z
 
-
-
-
+Summary:
+- even all the execution is about the same variable, addition will load first operand and then load second operand (from left to right according to precedence, as stack)
+- post and pre increment differed by loading and increasing bytecode order.
